@@ -64,7 +64,7 @@ $(document).ready(function() {
         debugger;
         for(var i=0; i < list.length; i++)
         {
-            var img = list[i].ImageUrl == null ? "images/slide-1.jpg" : list[i].ImageUrl;
+            var img = list[i].ImageUrl == null ? "images/slide-1.jpg" : apiUrl+list[i].ImageUrl;
             var $page = `<div class="item-slick1" style="background-image: url(${img});">
             <div class="container h-full">
                 <div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
