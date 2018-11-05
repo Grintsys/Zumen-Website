@@ -240,7 +240,7 @@
 							<i class="zmdi zmdi-search"></i>
 						</button>
 
-						<input class="mtext-107 cl2 size-114 plh2 p-r-15" type="text" name="search-product" placeholder="Search">
+						<input class="mtext-107 cl2 size-114 plh2 p-r-15" type="text" name="search-product" id="search-product" placeholder="Search">
 					</div>	
 				</div>
 
@@ -296,6 +296,8 @@
 
 			<div id="products" class="row isotope-grid"></div>
 			<!-- Load more -->
+
+			<div id="products2" class="row isotope-grid"></div>
 		</div>
 	</section>
 
@@ -669,6 +671,23 @@
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
 	<script src="js/api.js"></script>	
+
+	<script>
+		$('#search-product').keydown(function(event){
+
+			if ( event.which == 13 ) {
+				event.preventDefault();
+				var keyword = $('#search-product').val();
+				alert(keyword);
+
+				$('#products2').isotope({
+					// options
+					itemSelector: '.grid-item',
+					layoutMode: 'fitRows'
+				});
+			}
+		})
+	</script>
 
 </body>
 </html>

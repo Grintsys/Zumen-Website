@@ -81,7 +81,7 @@ $(document).ready(function() {
                     </div>
                         
                     <div class="layer-slick1 animated visible-false" data-appear="zoomIn" data-delay="1600">
-                        <a href="./product.html" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
+                        <a href="./product.html" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-show-modal1">
                             Ver
                         </a>
                     </div>
@@ -257,6 +257,17 @@ $(document).ready(function() {
         });
     });       
     });
+    });
+
+        /*==================================================================
+    [ Show modal1 ]*/
+    $('.js-show-modal1').on('click',function(e){
+        e.preventDefault();
+        $('.js-modal1').addClass('show-modal1');
+    });
+
+    $('.js-hide-modal1').on('click',function(){
+        $('.js-modal1').removeClass('show-modal1');
     });
 
    

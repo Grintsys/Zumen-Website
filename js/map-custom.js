@@ -16,8 +16,8 @@
                 img_pin = 'images/icons/location.png';
             }
             if (data_map_x == null || data_map_y == null) {
-                data_map_x = 40.007749;
-                data_map_y = -93.266572;
+                data_map_x = 15.4981557;
+                data_map_y = -88.0201355;
             }
             if (scrollwhell == null) {
                 scrollwhell = 0;
@@ -219,7 +219,7 @@
 
             if (selector_map !== undefined) {
                 var map = new google.maps.Map(document.getElementById('google_map'), {
-                    zoom: Number(map_zoom),
+                    zoom: 20,
                     zoomControl: false,  
                     disableDoubleClickZoom: true,
                     scrollwheel: scrollwhell,
